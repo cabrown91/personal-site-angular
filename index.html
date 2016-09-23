@@ -1,77 +1,106 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Personal Website - Angular</title>
-    <!-- meta -->
+<html ng-app='Portfolio'>
+<head>
+  <title>Alicia's Personal Website</title>
+  <!-- meta -->
   <meta charset="utf-8" />
   <meta name="description" content="Personal Site">
   <meta name="author" content="GA Student">
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-
-    <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- styles -->
+  <link rel="stylesheet" type="text/css" href="vendor/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" rel="stylesheet" />
-  <!-- Compiled and minified JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <!-- scripts -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
-  <script src="app.js"></script>
-  </head>
-  <body>
-    <nav class="blue-grey">
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo"><i class="material-icons">code</i>Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">About Me</a></li>
-          <li><a href="badges.html">My Work</a></li>
-          <span class="mega-octicon octicon-mark-github"></span>
-        </ul>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="scripts/app.js"></script>
+  <script src="scripts/controllers/cardsController.js"></script>
+    <script src="scripts/directives/card.js"></script>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="assets/imgs/favicon.png">
+</head>
+<body>
+  <div id="page-wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <a class="navbar-brand" href="#">My Work:</a>
+          <li><a href="https://github.com/cabrown91/functions-training">Functions Training</a></li>
+          <li><a href="https://github.com/cabrown91/jquery-events-training">jQuery Events Training</a></li>
+          <li><a href="https://cabrown91.github.io/Project0/">Project 0: Sky Racer (racing game)</a></li>
       </div>
     </nav>
-    <div class="parallax-container">
-      <div class="parallax">
-        <img src="/imgs/coding.jpg">
-      </div>
-    </div>
-    <div class="section white">
-      <div class="row container">
-        <div class="col s12 m8 16">
-          <img src="/imgs/IMG_0039_2.jpg" class="circle responsive-img">
-          <h2 class="header">Alicia Brown</h2>
-          <p class="grey-text text-darken-3 lighten-3 flow-text">I'm a full stack web developer.</p>
-        </div>
-      </div>
-    </div>
-    <div class="parallax-container">
-      <div class="parallax">
-        <img src="/imgs/coding.jpg">
-      </div>
-    </div>
-    <footer class="page-footer blue-grey">
-      <div class="container">
-        <div class="row">
-          <div class="col 16 s12">
-            <h5 class="white-text"> Footer </h5>
-            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-          </div>
-          <div class="col 14 offset-12 s12">
-            <h5 class="white-text">Links</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-          © 2016 Copyright Text
-        </div>
-      <div>
-    </footer>
 
-  </body>
+
+
+
+    <section>
+      <div class="container-fluid">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="jumbotron">
+              <h1 class="display-3">Hi, I'm Alicia Brown!</h1>
+                <p class="lead">Web Development Immersive Student, Cohort 31</p>
+                <hr class="m-y-2">
+                <p class="lead">
+                  <a class="btn btn-primary btn-lg" href="#" role="button" id="contact-button">Contact Me</a>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section>
+      <div class="container-fluid">
+        <div class="row" id="content-wrapper">
+          <div class="personal-content">
+            <div class="col-lg-4">
+                <h2>My Story</h2>
+                  <p>Hello, I'm a Web Development Immersive student at General Assembly and a future full-stack Web Developer with a specialty in MEAN stack technologies. I'm originally from Michigan, and have been living in San Francisco for 5 years. </p>
+            </div>
+            <div class="col-lg-4" id="my-photo">
+              <img class="img-responsive" src="assets/imgs/IMG_0039_2.jpg">
+            </div>
+            <div class="col-lg-4">
+                <h2>Languages, Libraries, and Frameworks</h2>
+                  <li>HTML/CSS</li>
+                  <li>Bootsrap</li>
+                  <li>Javascript</li>
+                  <li>jQuery</li>
+                  <li> AngularJS </li>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid" ng-controller="cardsController as cardsCtrl">
+        <div class="row" id="content-wrapper">
+            <div class="col-lg-12">
+                <h2 class="text-center">Portfolio Projects</h2>
+            </div>
+            <div class="col-lg-4" ng-repeat="card in cardsCtrl.projectsList">
+              <portfolio-card project="{{card.project}}"></portfolio-card>
+              <img class="img-responsive" ng-src="{{card.image}}">
+              <p>{{card.description}}</p>
+                <a href="{{lcard.ink}}">Visit this project</a>
+            </div>
+      </div>
+  </section>
+
+
+    <div class="container">
+      <footer class="footer">
+        <p class="text-muted">Place sticky footer content here.</p>
+        <p class="text-muted">Place sticky footer content here.</p>
+        <p class="text-muted">Place sticky footer content here.</p>
+      </footer>
+    </div>
+
+</body>
 </html>
