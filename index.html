@@ -85,7 +85,7 @@
                 <h2 class="text-center">Portfolio Projects</h2>
             </div>
             <div class="col-lg-4" ng-repeat="card in cardsCtrl.projectsList">
-              <portfolio-card project="{{card.project}}"></portfolio-card>
+              <h3>{{card.project}}</h3>
               <img class="img-responsive" ng-src="{{card.image}}">
               <p>{{card.description}}</p>
                 <a href="{{lcard.ink}}">Visit this project</a>
@@ -96,9 +96,7 @@
 
     <div class="container">
       <footer class="footer">
-        <p class="text-muted">Place sticky footer content here.</p>
-        <p class="text-muted">Place sticky footer content here.</p>
-        <p class="text-muted">Place sticky footer content here.</p>
+
       </footer>
     </div>
 
